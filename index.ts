@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import AllRoute from "./Controller/AllController";
-const port = 4573;
+const port = 2001;
 const url = "mongodb://localhost/set07Ecomerce";
 const app = express();
 app.use(express.json());
