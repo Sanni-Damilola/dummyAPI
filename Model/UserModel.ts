@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 
-// object struture
+// object structure
 interface Iprod {
 	name: string;
 	email: string;
