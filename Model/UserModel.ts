@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 
+
+// object struture
 interface Iprod {
 	name: string;
 	email: string;
@@ -8,8 +10,10 @@ interface Iprod {
 	isAdmin: boolean;
 }
 
+// extends to mongodb
 interface UserData extends Iprod, mongoose.Document {}
 
+// schema
 const UserSchema = new mongoose.Schema(
 	{
 		name: {
@@ -32,4 +36,5 @@ const UserSchema = new mongoose.Schema(
 	{ timestamps: true },
 );
 
+// model
 export default mongoose.model<UserData>("users", UserSchema);
