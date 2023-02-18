@@ -8,6 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// connecting to local host
 mongoose.connect(url).then(() => {
   console.log("database connection established");
 });
