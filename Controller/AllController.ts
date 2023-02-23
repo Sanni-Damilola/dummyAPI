@@ -20,6 +20,21 @@ router.get("/users", async (req: Request, res: Response) => {
   }
 });
 
+//get all product
+router.get("/allproduct", async (req: Request, res: Response) => {
+  try {
+    const getAllProduct = await ProductsModel.find();
+    return res.status(200).json({
+      message: "success",
+      data: getAllProduct,
+    });
+  } catch (err) {
+    res.status(404).json({
+      message: "an error occured",
+    });
+  }
+});
+
 //get one user
 router.get("/user/:id", async (req: Request, res: Response) => {
   try {
