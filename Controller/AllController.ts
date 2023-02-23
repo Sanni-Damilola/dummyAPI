@@ -21,7 +21,7 @@ router.get("/users", async (req: Request, res: Response) => {
 });
 
 //get all product
-router.get("/allproduct", async (req: Request, res: Response) => {
+router.get("/allproducts", async (req: Request, res: Response) => {
   try {
     const getAllProduct = await ProductsModel.find();
     return res.status(200).json({
@@ -36,12 +36,12 @@ router.get("/allproduct", async (req: Request, res: Response) => {
 });
 
 //get one user
-router.get("/user/:id", async (req: Request, res: Response) => {
+router.get("/product/:id", async (req: Request, res: Response) => {
   try {
-    const grtOneUser = await UserModel.findById(req.params.id);
+    const grtOneProduct = await ProductsModel.findById(req.params.id);
     return res.status(200).json({
       message: "success",
-      data: grtOneUser,
+      data: grtOneProduct,
     });
   } catch (err) {
     res.status(404).json({
