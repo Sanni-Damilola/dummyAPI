@@ -58,7 +58,7 @@ router.post("/register", async (req: Request, res: Response) => {
       password,
     });
     return res.status(200).json({
-      message: "success",
+      message: `welcome ${name}`,
       data: createUser,
     });
   } catch (err) {
